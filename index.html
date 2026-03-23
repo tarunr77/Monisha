@@ -66,7 +66,7 @@
     <div class="card">
       <h1>🎂 Happy Birthday Monisha! 👑</h1>
       <p>"A friend like you is rare to find..."</p>
-      <img class="responsive" src="images/birthday.jpg.png" alt="Birthday" onerror="imgFallback(this)">
+      <img class="responsive" src="images/birthday.jpg" alt="Birthday" onerror="imgFallback(this)">
       <br>
       <button class="navBtn" onclick="nextPage(2)">Open Surprise 🌸</button>
     </div>
@@ -74,15 +74,16 @@
 
   <section id="page2" class="page">
     <h2>Beautiful Memories 📸</h2>
-    <img class="responsive" src="images/memory1.jpg.mp4" alt="Memories" onerror="imgFallback(this)">
+    <img class="responsive" src="images/memory1.jpg" alt="Memories" onerror="imgFallback(this)">
     <p>Every moment we share is a favorite memory.</p>
     <button class="navBtn" onclick="nextPage(3)">See More 💫</button>
   </section>
 
   <section id="page3" class="page">
     <h2>A Special Video 🎥</h2>
-    <video controls onerror="videoFallback(this)">
-      <source src="images/video.mp4.mp4" type="video/mp4/mp4">
+    <video controls>
+      <source src="images/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <br>
     <button class="navBtn" onclick="nextPage(4)">Keep Going ❤️</button>
@@ -91,7 +92,7 @@
   <section id="page4" class="page">
     <div class="card">
       <p>ನಿನ್ನ ನಗು ಬೆಳಗಿನ ಸೂರ್ಯಕಿರಣದಂತೆ... ☀️</p>
-      <img class="responsive" src="images/poetry.jpg.jpeg" alt="Poetry" onerror="imgFallback(this)">
+      <img class="responsive" src="images/poetry.jpg" alt="Poetry" onerror="imgFallback(this)">
       <p>ಹುಟ್ಟುಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು 💖</p>
     </div>
     <button class="navBtn" onclick="nextPage(5)">Next 🌌</button>
@@ -100,14 +101,14 @@
   <section id="page5" class="page">
     <h2>To the Stars 🌠</h2>
     <p>Monisha, you shine brighter than any star.</p>
-    <img class="responsive" src="images/stars.jpg.jpeg" alt="Stars" onerror="imgFallback(this)">
+    <img class="responsive" src="images/stars.jpg" alt="Stars" onerror="imgFallback(this)">
     <button class="navBtn" onclick="nextPage(6)">The Finale 🎉</button>
   </section>
 
   <section id="page6" class="page">
     <h1 style="font-size: 3.5rem; letter-spacing: 8px;">MONISHA</h1>
     <p>✨ The universe celebrates you today ✨</p>
-    <img class="responsive" src="images/birthday.jpg.png" alt="Final" onerror="imgFallback(this)">
+    <img class="responsive" src="images/birthday.jpg" alt="Final" onerror="imgFallback(this)">
     <p>Happy Birthday!</p>
   </section>
 
@@ -125,14 +126,6 @@
       div.className = 'placeholder';
       div.innerHTML = `Image Not Found:<br>${src}`;
       img.replaceWith(div);
-    }
-
-    function videoFallback(v){
-      v.style.display = 'none';
-      const p = document.createElement('div');
-      p.className = 'placeholder';
-      p.innerText = "Video File Not Found (images/video.mp4)";
-      v.parentNode.insertBefore(p, v);
     }
 
     function startHeartRain(){
